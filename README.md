@@ -15,7 +15,7 @@ Conseil d'utilisation:
 7.  $ git commit -m "message_du_commit"
 8.  $ git status
 9.  $ git push origin 'nom_de_la_branche'
-10. créer une "pull request"
+10. créer une "pull request" de votre branche sur la branche class
 11. comparer les branches
 12. fusionner les branches
 
