@@ -7,6 +7,6 @@ abstract class Model
 
     public function __construct()
     {
-        $this->pdo = new \PDO('mysql:host=localhost;dbname=FUT', 'root', 'root');
+        $this->pdo = new \PDO('mysql:host=localhost;dbname=FUT', 'root', '');
     }
 }
