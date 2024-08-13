@@ -4,6 +4,7 @@ require_once __DIR__."/../Model/Model.php";
 
 class PlayersModel extends Model {
     
-  protected $table="players";
+  protected $table="Players";
     
-};
+
+}
