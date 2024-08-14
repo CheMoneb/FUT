@@ -18,7 +18,7 @@ foreach ($Players as $Player) { ?>
                 <p class="card-text"><?= htmlspecialchars($Player['Poste']); ?></p>
                 <p class="card-text">Nationalité : <?= htmlspecialchars($Player['Nation']); ?></p>
                 <p class="card-text">Prix : <?= htmlspecialchars($Player['Price']); ?>€</p>
-                <p class="card-text">Club_ID : <?= htmlspecialchars($Player['Club_ID']); ?></p>
+                <p class="card-text">Club : <?= htmlspecialchars($Player['Nom']); ?></p>
                 <div class="d-flex justify-content-between">
                     <a class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ?');" href="Player$Player/deletecars.php?id=<?= htmlspecialchars($Player['ID']); ?>">Supprimer</a>
                     <a class="btn btn-primary" href=".php?id=<?= htmlspecialchars($Player['ID']); ?>">Mettre à jour</a>
