@@ -60,7 +60,9 @@ ALTER TABLE Players ADD COLUMN Image_URL VARCHAR(255);
 
 UPDATE Players SET Image_URL = 'https://library.sportingnews.com/2021-11/lionel-messi-fut-base-93_1o3m39jkuh20j1itc0w2pe9x0d.png' WHERE Name = 'Lionel Messi';
 UPDATE Players SET Image_URL = 'https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-22/news/common/ratings-reveal/bundesliga/robert-lewandowski.png.adapt.crop16x9.652w.png' WHERE Name = 'Robert Lewandowski';
-UPDATE Players SET Image_URL = 'https://game-assets.fut.gg/2023/cards/futgg-cards/117461313.webp?quality=80&width=200' WHERE Name = 'Cristiano Ronaldo';
+UPDATE Players SET Image_URL = '
+https://game-assets.fut.gg/2023/cards/futgg-cards/117461313.webp?quality=80&width=200
+' WHERE Name = 'Cristiano Ronaldo'; 
 UPDATE Players SET Image_URL = 'https://image.jeuxvideo.com/medias-sm/163162/1631618091-773-artwork.png' WHERE Name = 'Kylian Mbappé';
 UPDATE Players SET Image_URL = 'https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-22/news/common/ratings-reveal/best-passers/kevin-de-bruyne.png.adapt.crop16x9.652w.png' WHERE Name = 'Kevin De Bruyne';
 UPDATE Players SET Image_URL = 'https://image.jeuxvideo.com/medias-sm/163162/1631618091-6987-artwork.png' WHERE Name = 'Neymar Jr';

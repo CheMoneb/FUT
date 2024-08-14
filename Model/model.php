@@ -11,7 +11,9 @@ abstract class Model {
     }
     
     public function findAll(){
-        $query = "SELECT * FROM Players";
+        $query = "SELECT * FROM Players AS p
+        INNER JOIN club AS c
+        ON p.Club_ID = c.ID ";
         $statement = $this->pdo->query($query);
         $statement->execute();
         $Players = $this->pdo->prepare($query);
