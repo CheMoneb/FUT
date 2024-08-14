@@ -12,7 +12,7 @@ if ($page==="Players"){
    include __DIR__."/Controller/ControllerPlayers.php";
    $controlleur=new ControllerPlayers();
    $controlleur->findAll("Players");
-   include __DIR__."/Template/TemplatePlayers.php";
+   //include __DIR__."/Template/TemplatePlayers.php";
 
 }
 
