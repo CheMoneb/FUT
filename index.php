@@ -8,10 +8,20 @@ else {
 }
 echo $page;
 if ($page==="Players"){
+   session_start();
    echo "je suis dans la page Players!";
    include __DIR__."/Controller/ControllerPlayers.php";
    $controlleur=new ControllerPlayers();
    $controlleur->findAll("Players");
+   //include __DIR__."/Template/TemplatePlayers.php";
+
+}
+
+if ($page==="Club"){
+   echo "je suis dans la page Club";
+   include __DIR__."/Controller/ControllerClub.php";
+   $controlleur=new ControllerClub();
+   $controlleur->findAll("Club");
    //include __DIR__."/Template/TemplatePlayers.php";
 
 }

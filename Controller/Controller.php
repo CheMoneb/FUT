@@ -11,13 +11,13 @@ abstract class Controller {
 
     public function findAll($template){
         // un controlleur appelle optionnement un model
-        $Players=$this->model->findAll();
+        $FUT=$this->model->findAll();
         // un controlleur appelle forcement une vue
         include __DIR__."/../Template/".$template.".php";
     }
 
     public function findBy($id,$template){
-        $Players=$this->model->findBy($id);
+        $FUT=$this->model->findBy($id);
         include __DIR__."/../Template/".$template.".php";       
     }
 

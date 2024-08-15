@@ -73,3 +73,6 @@ UPDATE Players SET Image_URL = 'https://media.contentapi.ea.com/content/dam/ea/f
 
 UPDATE Players SET Image_URL = 'https://www.futoir.fr/wp-content/uploads/2023/01/Bellingham.png' WHERE Name = 'Jude Bellimgham';
 UPDATE Players SET Image_URL = 'https://pbs.twimg.com/media/GSehyo_XYAACeXw.png' WHERE Name = 'Lamine Yamal';
+
+
+INSERT INTO Players (Name, Poste, Nation, Note, Price) VALUES ('Chervine', 'BU', 'IRAN', 100, '1 000 000');
