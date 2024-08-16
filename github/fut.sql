@@ -75,6 +75,21 @@ UPDATE Players SET Image_URL = 'https://media.contentapi.ea.com/content/dam/ea/f
 
 UPDATE Players SET Image_URL = 'https://www.futoir.fr/wp-content/uploads/2023/01/Bellingham.png' WHERE Name = 'Jude Bellimgham';
 UPDATE Players SET Image_URL = 'https://pbs.twimg.com/media/GSehyo_XYAACeXw.png' WHERE Name = 'Lamine Yamal';
+
 UPDATE Players SET Image_URL = 'https://yourdomain.com/images/Chervine.jpeg' WHERE Name = 'Chervine Monashipour';
 
 ('Chervine', 'BU', 'Iran', 100, '200000', 1, 'https://yourdomain.com/images/Chervine.jpeg');
+
+
+
+INSERT INTO Transfert (Name, Poste, Nation, Note, Price) VALUES ('Chervine', 'BU', 'IRAN', 100, '1 000 000');
+
+UPDATE Players SET Image_URL = 'https://media.lesechos.com/api/v1/images/view/642d165b79f802262200f6e3/1280x720/loup-gris.jpg' WHERE Name = 'Chervine';
+
+UPDATE Players
+SET Club_ID = 2
+WHERE Name = 'Chervine'; 
+
+ALTER TABLE Transfert
+DROP COLUMN New_Club_ID;
+

@@ -2,6 +2,7 @@
 
 abstract class Model {
     protected PDO $pdo;
+    protected $table;
     
         
 
@@ -11,20 +12,18 @@ abstract class Model {
     }
     
     public function findAll(){
-        $query = "SELECT * FROM Players AS p
-        INNER JOIN club AS c
-        ON p.Club_ID = c.ID ";
+        $query = "SELECT * FROM $this->table ";
         $statement = $this->pdo->query($query);
         $statement->execute();
-        $Players = $this->pdo->prepare($query);
-        $Players = $statement->fetchAll(PDO::FETCH_ASSOC); 
-        return $Players;
+        $FUT = $this->pdo->prepare($query);
+        $FUT = $statement->fetchAll(PDO::FETCH_ASSOC); 
+        return $FUT;
 
     }
 
     public function findBy($id){
 
-        $query = "SELECT * FROM Players where ID = :ID";
+        $query = "SELECT * FROM $this->table where ID = :ID";
         $statement = $this->pdo->prepare($query);
         $statement->bindParam(':ID', $id, PDO::PARAM_INT);
         $statement->execute();
