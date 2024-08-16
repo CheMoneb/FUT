@@ -2,7 +2,7 @@
 
 require_once __DIR__."/../Model/Model.php";
 
-class PlayersModel extends Model {
+class TransfertModel extends Model {
 
         protected $table = "Transfert";
 

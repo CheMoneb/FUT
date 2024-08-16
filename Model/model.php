@@ -23,7 +23,7 @@ abstract class Model {
 
     public function findBy($id){
 
-        $query = "SELECT * FROM Players where ID = :ID";
+        $query = "SELECT * FROM $this->table where ID = :ID";
         $statement = $this->pdo->prepare($query);
         $statement->bindParam(':ID', $id, PDO::PARAM_INT);
         $statement->execute();

@@ -26,6 +26,15 @@ if ($page==="Club"){
 
 }
 
+if ($page==="Transfert"){
+   echo "je suis dans la page Transfert";
+   include __DIR__."/Controller/ControllerTransfert.php";
+   $controlleur=new ControllerTransfert();
+   $controlleur->findAll("Transfert");
+   //include __DIR__."/Template/TemplatePlayers.php";
+
+}
+
 //if ($page==="Player"){
    //echo "je suis dans la page Players!";
    //include __DIR__."/Controller/ControllerPlayers.php";

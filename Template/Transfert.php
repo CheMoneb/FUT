@@ -10,7 +10,7 @@
     <h1 class="text-center my-4">Liste des Joueurs</h1>
     <div class="container">
         <div class="row">
-        <?php foreach ($FUT as $Player) {
+        <?php foreach ($FUT as $Transfert) {
                 foreach($_SESSION["Clubs"] as $Club) { 
                     if($Player["Club_ID"] === $Club["ID"]) { ?>
                     <div class="col-12 col-sm-6 col-lg-4 mb-4">
@@ -26,7 +26,7 @@
                                     <a class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ?');" href="Player$Player/deletecars.php?id=<?= htmlspecialchars($Player['ID']); ?>">Supprimer</a>
                                     <a class="btn btn-primary" href=".php?id=<?= htmlspecialchars($Player['ID']); ?>">Mettre à jour</a>
                                 </div>
-                                <a href="?Id=<?= $Player['ID']; ?>" class="btn btn-outline-success mt-2">Transfert</a>
+                                <a href="?Id=<?= $Player['ID']; ?>" class="btn btn-outline-success mt-2">Réserver</a>
                             </div>
                         </div>
                     </div>
