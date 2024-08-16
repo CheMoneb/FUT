@@ -22,6 +22,8 @@ if ($page==="delete"){
    $controlleur=new DeleteController();
    $id = "ID";
    $controlleur->delete($id);
+}
+
 if ($page==="Club"){
    echo "je suis dans la page Club";
    include __DIR__."/Controller/ControllerClub.php";
