@@ -1,3 +1,8 @@
+<?php
+
+$_SESSION["Players"] = $FUT;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

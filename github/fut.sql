@@ -29,6 +29,13 @@ CREATE TABLE Transfert (
     FOREIGN KEY (New_Club_ID) REFERENCES Club(ID)
 ); 
 
+
+CREATE TABLE Free (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    Players_ID INT,
+    FOREIGN KEY (Players_ID) REFERENCES Players(ID)
+);
+
 INSERT INTO Club (Nom)
 VALUES
 ('Paris Saint-Germain'),
@@ -90,6 +97,8 @@ UPDATE Players
 SET Club_ID = 2
 WHERE Name = 'Chervine'; 
 
-ALTER TABLE Transfert
-DROP COLUMN New_Club_ID;
+UPDATE Players
+SET Club_ID = 8
+WHERE Name = 'Chervine';
 
+INSERT INTO Free (Players_ID) VALUES (13);

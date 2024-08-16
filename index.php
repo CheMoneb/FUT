@@ -8,9 +8,10 @@ else {
 }
 echo $page;
 if ($page==="Players"){
-   session_start();
-   echo "je suis dans la page Players!";
    include __DIR__."/Controller/ControllerPlayers.php";
+   include __DIR__."/Controller/ControllerClub.php";
+   $controlleur=new ControllerClub();
+   $controlleur->findAll("Club");
    $controlleur=new ControllerPlayers();
    $controlleur->findAll("Players");
    //include __DIR__."/Template/TemplatePlayers.php";
@@ -25,7 +26,6 @@ if ($page==="delete"){
 }
 
 if ($page==="Club"){
-   echo "je suis dans la page Club";
    include __DIR__."/Controller/ControllerClub.php";
    $controlleur=new ControllerClub();
    $controlleur->findAll("Club");
@@ -33,14 +33,6 @@ if ($page==="Club"){
 
 }
 
-if ($page==="Transfert"){
-   echo "je suis dans la page Transfert";
-   include __DIR__."/Controller/ControllerTransfert.php";
-   $controlleur=new ControllerTransfert();
-   $controlleur->findAll("Transfert");
-   //include __DIR__."/Template/TemplatePlayers.php";
-
-}
 
 //if ($page==="Player"){
    //echo "je suis dans la page Players!";
@@ -49,3 +41,13 @@ if ($page==="Transfert"){
    //$controlleur->findBy("Players");
    //include __DIR__."/Template/books.php";
 //}
+
+if ($page==="Free"){
+   session_start();
+   echo "je suis dans la page Free!";
+   include __DIR__."/Controller/ControllerFree.php";
+   include __DIR__."/Controller/ControllerPlayers.php";
+   $controlleur=new ControllerFree();
+   $controlleur->findAll("Free");
+   //include __DIR__."/Template/books.php";
+}

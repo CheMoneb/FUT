@@ -10,9 +10,10 @@
     <h1 class="text-center my-4">Liste des Joueurs</h1>
     <div class="container">
         <div class="row">
-        <?php foreach ($FUT as $Transfert) {
-                foreach($_SESSION["Clubs"] as $Club) { 
-                    if($Player["Club_ID"] === $Club["ID"]) { ?>
+        <?php 
+        foreach($_SESSION["Players"] as $Player) { 
+                foreach ($FUT as $Free) {
+                    if($Free["Players_ID"] === $Player["ID"]) { ?>
                     <div class="col-12 col-sm-6 col-lg-4 mb-4">
                         <div class="card">
                             <img src="<?= htmlspecialchars($Player['Image_URL']); ?>" class="card-img-top img-fluid" alt="Image de <?= htmlspecialchars($Player['Name']); ?>">
@@ -26,13 +27,14 @@
                                     <a class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ?');" href="Player$Player/deletecars.php?id=<?= htmlspecialchars($Player['ID']); ?>">Supprimer</a>
                                     <a class="btn btn-primary" href=".php?id=<?= htmlspecialchars($Player['ID']); ?>">Mettre à jour</a>
                                 </div>
-                                <a href="?Id=<?= $Player['ID']; ?>" class="btn btn-outline-success mt-2">Réserver</a>
+                                <a href="?Id=<?= $Player['ID']; ?>" class="btn btn-outline-success mt-2">Transfert</a>
                             </div>
                         </div>
                     </div>
         <?php }
         }
-    } ?>
+    }
+ ?>
         </div>
     </div>
 
