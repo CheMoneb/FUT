@@ -55,6 +55,8 @@ VALUES
 ('Sadio Mané', 'LW', 'Sénégal', 89, '90000', 7),
 ('Jude Bellimgham', 'MC', 'Angleterre', 91, '150000',8),
 ('Lamine Yamal', 'AD', 'Espagne', 97, '200000',2);
+('Chervine Monashipour', 'BU', 'Iran', 100, '1000000',8);
+
 
 ALTER TABLE Players ADD COLUMN Image_URL VARCHAR(255);
 
@@ -73,3 +75,6 @@ UPDATE Players SET Image_URL = 'https://media.contentapi.ea.com/content/dam/ea/f
 
 UPDATE Players SET Image_URL = 'https://www.futoir.fr/wp-content/uploads/2023/01/Bellingham.png' WHERE Name = 'Jude Bellimgham';
 UPDATE Players SET Image_URL = 'https://pbs.twimg.com/media/GSehyo_XYAACeXw.png' WHERE Name = 'Lamine Yamal';
+UPDATE Players SET Image_URL = 'https://yourdomain.com/images/Chervine.jpeg' WHERE Name = 'Chervine Monashipour';
+
+('Chervine', 'BU', 'Iran', 100, '200000', 1, 'https://yourdomain.com/images/Chervine.jpeg');

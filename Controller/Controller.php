@@ -21,4 +21,13 @@ abstract class Controller {
         include __DIR__."/../Template/".$template.".php";       
     }
 
+
+    public function delete($Players_id){
+        $Players=$this->model->delete($Players_id);
+        include __DIR__."/../Template/delete.php";
+    
+    }
+
+
+
 }

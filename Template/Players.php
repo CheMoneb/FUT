@@ -21,7 +21,7 @@
                         <p class="card-text">Prix : <?= htmlspecialchars($Player['Price']); ?>€</p>
                         <p class="card-text">Club : <?= htmlspecialchars($Player['Nom']); ?></p>
                         <div class="d-flex justify-content-between">
-                            <a class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ?');" href="Player$Player/deletecars.php?id=<?= htmlspecialchars($Player['ID']); ?>">Supprimer</a>
+                            <a class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ?');" href="Player$Player/delete.php?id=<?= htmlspecialchars($Player['ID']); ?>">Supprimer</a>
                             <a class="btn btn-primary" href=".php?id=<?= htmlspecialchars($Player['ID']); ?>">Mettre à jour</a>
                         </div>
                         <a href="?Id=<?= $Player['ID']; ?>" class="btn btn-outline-success mt-2">Réserver</a>

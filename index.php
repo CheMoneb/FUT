@@ -16,6 +16,15 @@ if ($page==="Players"){
 
 }
 
+if ($page==="delete"){
+   include __DIR__."/Controller/DeleteController.php";
+   $controlleur=new DeleteController();
+   $id = "ID";
+   $controlleur->delete($id);
+   //include __DIR__."/Template/TemplatePlayers.php";
+
+}
+
 //if ($page==="Player"){
    //echo "je suis dans la page Players!";
    //include __DIR__."/Controller/ControllerPlayers.php";
